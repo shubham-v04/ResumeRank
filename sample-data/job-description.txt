@@ -1,0 +1,29 @@
+Backend Developer - Job Description
+
+We are looking for a Backend Developer to join our engineering team.
+
+Responsibilities:
+- Design and build RESTful APIs using Python and FastAPI
+- Work with PostgreSQL and SQL databases for data modeling and queries
+- Write clean, tested, maintainable code and use Git for version control
+- Collaborate with frontend developers to integrate APIs
+- Debug and optimize backend performance issues
+- Participate in code reviews and technical discussions
+
+Required Skills:
+- Strong proficiency in Python
+- Experience with FastAPI or Flask
+- Solid understanding of REST API design
+- Experience with SQL / PostgreSQL
+- Familiarity with Git and version control workflows
+- Understanding of basic data structures and algorithms
+- Good problem-solving and debugging skills
+
+Preferred (nice to have):
+- Experience with Docker
+- Experience with cloud platforms (AWS/GCP/Azure)
+- Familiarity with CI/CD pipelines
+- Exposure to microservices architecture
+
+Experience: 2+ years in backend or full-stack software development
+Education: Bachelor's degree in Computer Science or related field (or equivalent experience)

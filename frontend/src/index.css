@@ -1,0 +1,309 @@
+:root {
+  --ink: #122a2e;
+  --ink-soft: #2c454a;
+  --page-bg: #f5f7f6;
+  --panel-bg: #ffffff;
+  --border: #e2e5ea;
+  --accent: #1f7a5c;
+  --accent-dark: #145c44;
+  --accent-soft: #e4f2ec;
+  --danger: #b94a48;
+  --danger-soft: #fbe9e8;
+  --text: #1b2430;
+  --text-muted: #667079;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--page-bg);
+  color: var(--text);
+}
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  background-color: var(--ink);
+  color: #f5f7f6;
+  padding: 18px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .inner-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header .wordmark {
+  font-family: "Fraunces", serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.site-header .tagline {
+  font-size: 13px;
+  color: #b7c4c2;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 56px 32px 32px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+.hero p {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ---------- Main / tool panel ---------- */
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px 60px;
+}
+
+.tool-panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(18, 42, 46, 0.08);
+  padding: 40px 56px;
+  max-width: 960px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  margin-top: 22px;
+  color: var(--ink);
+}
+
+.tool-panel > label:first-child {
+  margin-top: 0;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+input[type="file"] {
+  margin-top: 6px;
+}
+
+/* ---------- Buttons ---------- */
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background-color 0.15s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--accent-dark);
+}
+
+.btn-primary:disabled {
+  background-color: #a9c9bd;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: #eef0f2;
+  color: var(--ink);
+}
+
+.btn-secondary:hover {
+  background-color: #e2e5ea;
+}
+
+.btn-download {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-download:hover {
+  background-color: var(--accent-dark);
+}
+
+/* ---------- Results table ---------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  background-color: #f0f4f3;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+tbody tr:hover {
+  background-color: #fafcfb;
+}
+
+a {
+  color: var(--accent-dark);
+}
+
+.btn-view-resume {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background-color: var(--accent-soft);
+  color: var(--accent-dark);
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.btn-view-resume:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* ---------- Feedback states ---------- */
+
+.error-banner {
+  background-color: var(--danger-soft);
+  color: var(--danger);
+  padding: 11px 14px;
+  border-radius: 8px;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.loading-text {
+  margin-top: 18px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background-color: var(--ink);
+  color: #b7c4c2;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
+
+.site-footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 14px 18px;
+  }
+  .hero {
+    padding: 40px 18px 24px;
+  }
+  .tool-panel {
+    padding: 24px 20px;
+  }
+  table, thead, tbody, tr {
+    display: block;
+  }
+  th {
+    display: none;
+  }
+  td {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: none;
+    padding: 6px 4px;
+  }
+  tr {
+    border-bottom: 1px solid var(--border);
+    padding: 8px 0;
+  }
+}
